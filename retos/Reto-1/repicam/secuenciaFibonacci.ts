@@ -3,7 +3,8 @@
 
 const userIterator: number = +process.argv[2] || 10 //iterator by default
 
-function generateFibonacci(iterator: number): string{
+//ITERATIVE SEQUENCE
+function iterativeFibonacci(iterator: number): string{
   if (iterator < 2) return "1"
 
   let numberList: number[] = []
@@ -20,5 +21,19 @@ function generateFibonacci(iterator: number): string{
 
   return numberList.toString()
 }
+console.log("ITERATIVE SEQUENCE")
+console.log(iterativeFibonacci(userIterator))
 
-console.log(generateFibonacci(userIterator))
+
+//RECURSIVE SEQUENCE
+let fibonacciSequence: number[] = []
+function recursiveFibonacci(iterator: number): number{
+  if (iterator < 2) return 1
+  return recursiveFibonacci(iterator-1) + recursiveFibonacci(iterator-2)  
+}
+
+for(let z = 0; z < userIterator; z++){
+  fibonacciSequence.push(recursiveFibonacci(z))
+}
+console.log("RECURSIVE SEQUENCE")
+console.log(fibonacciSequence.toString())
