@@ -1,16 +1,26 @@
-package fibonacci
+package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func Fibonacci(numbers int) string {
-	array := []int{1, 1, 2}
+func main() {
+	fmt.Println(fibonacci(15));
+}
+
+func fibonacci(numbers int) string {
+	array := []int{0, 1}
 	
+	if(numbers < 2) {
+		return "1";
+	}
 	
-	for i := 3; i < numbers; i++ {		
-		array = append(array, array[i - 1] + array[i - 2]);
+	for i := 1; i < numbers; i++ {
+		array = append(array, array[i] + array[i - 1]);		
 	}
 
-	return arrayToString(array);
+	return strings.Replace(arrayToString(array), "0,", "", -1);
 }
 
 func arrayToString(array []int) string{
