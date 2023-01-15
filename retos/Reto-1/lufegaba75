@@ -1,0 +1,42 @@
+package org.lufegaba75.fibonacci;
+
+import java.util.*;
+
+public class Fibonacci  {
+    static List<Integer> serieFibonacci = new ArrayList<>();
+    public static void main(String[] args) {
+    boolean incorrecto = true;
+        while(incorrecto) {
+            try{
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Indique cuántos términos de la serie desea: ");
+                verSerie(serieFibonacci(sc.nextInt()));
+                incorrecto = false;
+            }catch(InputMismatchException e){
+                System.out.println("Entrada inválida, debe introducir un número entero, prueba de nuevo ");
+            }
+        }
+    }
+    public static List<Integer> serieFibonacci(int n){
+
+        for (int i = 0; i < n; i++) {
+            if (i > 1){
+                serieFibonacci.add(serieFibonacci.get(i-1)+ serieFibonacci.get(i-2));
+            }else if(i == 0){
+                serieFibonacci.add(1);
+            }else{
+                serieFibonacci.add(serieFibonacci.get(i-1));
+            }
+        }
+        return serieFibonacci;
+    }
+    public static void verSerie(List<Integer> lista){
+        System.out.println("\n========= Serie Fibonacci de " + serieFibonacci.size() + " términos =========");
+        System.out.print("\t\t\t\t(");
+        for (int i = 0; i < lista.size()-1; i++) {
+            System.out.print(lista.get(i)+",");
+        }
+        System.out.println(lista.get(lista.size()-1)+")");
+        System.out.println("=================================================");
+    }
+}
