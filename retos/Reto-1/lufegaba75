@@ -3,40 +3,40 @@ package org.lufegaba75.fibonacci;
 import java.util.*;
 
 public class Fibonacci  {
-    static List<Integer> serieFibonacci = new ArrayList<>();
+    static List<Integer> fibonacciSerie = new ArrayList<>();
     public static void main(String[] args) {
-    boolean incorrecto = true;
-        while(incorrecto) {
+    boolean wrongInput = true;
+        while(wrongInput) {
             try{
                 Scanner sc = new Scanner(System.in);
                 System.out.print("Indique cuántos términos de la serie desea: ");
-                verSerie(serieFibonacci(sc.nextInt()));
-                incorrecto = false;
+                showSerie(createSerie(sc.nextInt()));
+                wrongInput = false;
             }catch(InputMismatchException e){
                 System.out.println("Entrada inválida, debe introducir un número entero, prueba de nuevo ");
             }
         }
     }
-    public static List<Integer> serieFibonacci(int n){
+    public static List<Integer> createSerie (int n){
 
         for (int i = 0; i < n; i++) {
             if (i > 1){
-                serieFibonacci.add(serieFibonacci.get(i-1)+ serieFibonacci.get(i-2));
+                fibonacciSerie.add(fibonacciSerie.get(i-1)+ fibonacciSerie.get(i-2));
             }else if(i == 0){
-                serieFibonacci.add(1);
+                fibonacciSerie.add(1);
             }else{
-                serieFibonacci.add(serieFibonacci.get(i-1));
+                fibonacciSerie.add(fibonacciSerie.get(i-1));
             }
         }
-        return serieFibonacci;
+        return fibonacciSerie;
     }
-    public static void verSerie(List<Integer> lista){
-        System.out.println("\n========= Serie Fibonacci de " + serieFibonacci.size() + " términos =========");
+    public static void showSerie(List<Integer> list){
+        System.out.println("\n========= Serie Fibonacci de " + fibonacciSerie.size() + " términos =========");
         System.out.print("\t\t\t\t(");
-        for (int i = 0; i < lista.size()-1; i++) {
-            System.out.print(lista.get(i)+",");
+        for (int i = 0; i < list.size()-1; i++) {
+            System.out.print(list.get(i)+",");
         }
-        System.out.println(lista.get(lista.size()-1)+")");
+        System.out.println(list.get(list.size()-1)+")");
         System.out.println("=================================================");
     }
 }
