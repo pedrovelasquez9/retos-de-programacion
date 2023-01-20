@@ -11,7 +11,7 @@ Un palíndromo es una palabra o frase que se lee igual en un sentido que en otro
 
 ### Enunciado
 
-Con el lenguaje de programación de tu preferencia, realiza una función que calcule reciba un string como parámetro y valide si la frase o palabra es un paíndromo, cumpliendo las siguientes condiciones:
+Con el lenguaje de programación de tu preferencia, realiza una función que reciba un string como parámetro y valide si la frase o palabra es un palíndromo, cumpliendo las siguientes condiciones:
 
 - **No tomar en cuenta signos de puntuación comunes (.!¡?¿''""...)**
 - **Puedes valerte de cualquier estructura de datos o transformaciones para validar una frase/palabra**
