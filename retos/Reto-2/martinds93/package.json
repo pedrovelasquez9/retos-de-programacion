@@ -2,15 +2,15 @@
   "name": "martinds93",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node ./tests/index.test.ts",
+    "start": "ts-node ./index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@types/chai": "^4.3.4",
-    "chai": "^4.3.7"
+  "devDependencies": {
+    "@types/node": "^18.11.18"
   }
 }
