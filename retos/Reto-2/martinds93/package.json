@@ -1,0 +1,16 @@
+{
+  "name": "martinds93",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "ts-node ./tests/index.test.ts",
+    "start": "ts-node ./index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}

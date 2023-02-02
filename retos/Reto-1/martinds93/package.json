@@ -1,0 +1,18 @@
+{
+  "name": "retos-programacion-es",
+  "version": "1.0.0",
+  "description": "Retos para programacion es",
+  "scripts": {
+    "start":"ts-node reto1/index.ts"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4"
+  },
+  "author": "Martin dos santos",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chai": "^4.3.4",
+    "chai": "^4.3.7"
+  }
+}
