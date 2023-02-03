@@ -1,7 +1,6 @@
 
 function palindromo (text){
     if (text.length > 1 && typeof text){
-        //coembjgdfjzhf
         let textOriginal=text;
         text=text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         text=text.replaceAll(/\s/g,"");
