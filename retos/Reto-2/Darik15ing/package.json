@@ -2,7 +2,7 @@
   "name": "palindromo",
   "version": "1.0.0",
   "description": "",
-  "main": "palindromo.js",
+  "main": "palindrome.js",
   "scripts": {
     "test": "jest --coverage"
   },
