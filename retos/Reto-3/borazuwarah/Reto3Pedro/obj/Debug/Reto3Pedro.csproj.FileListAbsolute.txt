@@ -1,0 +1,8 @@
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\bin\Debug\Reto3Pedro.exe.config
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\bin\Debug\Reto3Pedro.exe
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\bin\Debug\Reto3Pedro.pdb
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\obj\Debug\Reto3Pedro.csproj.AssemblyReference.cache
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\obj\Debug\Reto3Pedro.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\obj\Debug\Reto3Pedro.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\obj\Debug\Reto3Pedro.exe
+C:\Users\Pablo\source\repos\Reto3Pedro\Reto3Pedro\obj\Debug\Reto3Pedro.pdb
