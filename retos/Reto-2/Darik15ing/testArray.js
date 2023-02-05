@@ -1,4 +1,4 @@
-const frasePalindromo = [
+const palindromePhrase = [
     "Atar a la rata",
     "¿Acaso hubo búhos acá?",
     "¿Somos o no somos?",
@@ -21,7 +21,7 @@ const frasePalindromo = [
     "Ateo poco poeta¿#"
 ];
 
-const fraseNoPalindromo = [
+const nonPalindromephrase = [
     "Una aventura",
     "Mariposa colosal, sí,",
     "Amor azul",
@@ -37,7 +37,7 @@ const fraseNoPalindromo = [
     "usar textos como por ejemplo 'Contenido aquí'",
     "|°!Estos textos hacen parecerlo un español que se puede leer. ¡?*]"
 ];
-const palabraPalindromo = [
+const palindromeWord = [
     "Ojo",
     "tenet",
     "móom'",
@@ -50,7 +50,7 @@ const palabraPalindromo = [
     "oro"
 ];
 
-const palabraNoPalindromo = [
+const nonPalindromeword = [
 "are",
 "aré",
 "ase",
@@ -61,7 +61,7 @@ const palabraNoPalindromo = [
 "sad"
 ];
 
-const charNum = [
+const charNumber = [
     "a",
     "b",
     "v",
@@ -84,9 +84,9 @@ const charNum = [
 ];
 
 module.exports = {
-    frasePalindromo, 
-    fraseNoPalindromo, 
-    palabraPalindromo, 
-    palabraNoPalindromo, 
-    charNum
+    palindromePhrase, 
+    nonPalindromephrase, 
+    palindromeWord, 
+    nonPalindromeword, 
+    charNumber
 };
