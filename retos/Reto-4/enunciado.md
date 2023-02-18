@@ -1,4 +1,4 @@
-## Reto de programación #4 - Refactor.
+## Reto de programación #4 - Cambio de funcionalidades.
 
 ### Contexto
 
@@ -11,7 +11,7 @@ Dentro de los distintos formatos de nomenclatura de objetos, variables, propieda
 
 ### Enunciado
 
-Crea un nuevo proyecto partiendo del reto #3 y refactoriza la funcionalidad para que se reciba:
+Crea un nuevo proyecto partiendo del reto #3 y cambia la funcionalidad para que se reciba:
 
 - **Un string conformado de una palabra o frase en cualquiera de los Cases mencionados (Pascal, Camel, Kebab y Snake)**
 - **Una opción para transformar ese string en algún formato de los mencionados**
@@ -26,7 +26,7 @@ Cumpliendo las siguientes condiciones:
 
 ### Reto adicional
 
-**Agregar/refactorizar testing al programa/script**
+**Agregar/cambiar testing al programa/script**
 
 ### Resultado esperado
 
