@@ -1,8 +1,7 @@
 import {describe, expect, test} from '@jest/globals';
 import { caseTransformer} from '../src/index';
 import { Formats } from '../src/utils/constants';
-import { getCleanText, getCleanTextFromFormat } from './../src/utils/textSanitizing';
-import { formatters } from './../src/utils/caseFormatter';
+import { getCleanTextFromFormat } from './../src/utils/textSanitizing';
 
 const camelCaseStringInput: string = `holaMundo`;
 const snakeCaseStringInput: string = `hola_mundo`;
