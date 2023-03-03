@@ -19,7 +19,7 @@ Crea un nuevo proyecto partiendo del reto #3 y cambia la funcionalidad para que 
 Cumpliendo las siguientes condiciones:
 
 - **Si se pide el mismo formato que ya tiene, no aplicar transformaciones y retornar el valor ingresado**
-- **Puedes valerte de cualquier estructura de datos o transformaciones para las transformaciones**
+- **Puedes valerte de cualquier estructura de datos o transformaciones para las validaciones**
 - **Ten cuidado con caracteres especiales en los strings**
 - **En la respuesta de la función debe indicarse el case original del texto transformado**
 - **Indicar también el caso en que el texto no tuviese un formato conocido (ninguno de los 4 cases)**
