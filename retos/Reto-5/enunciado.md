@@ -16,8 +16,8 @@ Consideremos los números romanos y sus equivalencias:
 
 Programar un convertidor de números romanos a enteros cumpliendo las siguientes condiciones:
 
-- **Si el número es menor a 1, retornar mensaje al usuario**
-- **El entero máximo a pasar a la función será 3000 (MMM)**
+- **Si el usuario ingresa una letra no válida (número romano no válido) retornar un mensaje de error**
+- **El entero máximo a transformar por la función será 3000 (MMM)**
 - **Puedes valerte de cualquier estructura de datos y función del lenguaje que uses**
 
 ### Reto adicional
