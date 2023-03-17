@@ -51,6 +51,13 @@ describe("Test main roman to int transformer function", () => {
         expect(transformationResult).toBe(intExpectedNumber);
     });
 
+    test("It should return transformed integer number from roman number input", () => {
+        const testInputRomanNumber = "IX";
+        const intExpectedNumber = 9;
+        const transformationResult = transformRomanToInt(testInputRomanNumber);
+        expect(transformationResult).toBe(intExpectedNumber);
+    });
+
     test("It should return an error for max number validation", () => {
         const testInputRomanNumber = "MMMM";
         const transformationResult = transformRomanToInt(testInputRomanNumber);
