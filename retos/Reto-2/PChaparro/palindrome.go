@@ -1,6 +1,7 @@
 package palindrome
 
 import (
+	"fmt"
 	"regexp"
 	"strings"
 	"unicode"
@@ -9,6 +10,11 @@ import (
 	"golang.org/x/text/transform"
 	"golang.org/x/text/unicode/norm"
 )
+
+var returnMessages = map[bool]string{
+	true:  "La %s es un palíndromo",
+	false: "La %s no es un palíndromo",
+}
 
 // Normalize returns a normalized string with all unicode characters removed
 func Normalize(s string) (string, error) {
@@ -30,4 +36,33 @@ func Normalize(s string) (string, error) {
 	out = strings.ToLower(out)
 
 	return out, nil
+}
+
+// IsPalindrome returns true if the given string is a palindrome
+func IsPalindrome(s string) (string, error) {
+	// Normalize the string
+	normalized, err := Normalize(s)
+	if err != nil {
+		return "false", err
+	}
+
+	// Reverse the string
+	reversed := ""
+
+	for _, char := range normalized {
+		reversed = string(char) + reversed
+	}
+
+	// Compare
+	var textType string
+	isPalindrome := normalized == reversed
+
+	if len(strings.Split(s, " ")) > 1 {
+		textType = "frase"
+	} else {
+		textType = "palabra"
+	}
+
+	message := fmt.Sprintf(returnMessages[isPalindrome], textType)
+	return message, nil
 }
