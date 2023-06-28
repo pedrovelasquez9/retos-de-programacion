@@ -36,3 +36,45 @@ func TestNormalizeFunction(t *testing.T) {
 	require.NoError(err)
 	require.Equal(expected, actual)
 }
+
+func TestIsPalindromeFunction(t *testing.T) {
+	require := require.New(t)
+
+	// Test cases 1: Palindrome
+	input := "Ana"
+	expected := "La palabra es un palíndromo"
+	actual, err := palindrome.IsPalindrome(input)
+	require.NoError(err)
+	require.Equal(expected, actual)
+
+	input = "¿Acaso hubo búhos acá?"
+	expected = "La frase es un palíndromo"
+	actual, err = palindrome.IsPalindrome(input)
+	require.NoError(err)
+	require.Equal(expected, actual)
+
+	input = "Anita lava la tina"
+	expected = "La frase es un palíndromo"
+	actual, err = palindrome.IsPalindrome(input)
+	require.NoError(err)
+	require.Equal(expected, actual)
+
+	// Test cases 2: Not palindrome
+	input = "Frase random"
+	expected = "La frase no es un palíndromo"
+	actual, err = palindrome.IsPalindrome(input)
+	require.NoError(err)
+	require.Equal(expected, actual)
+
+	input = "¿Acaso hubo búhos acá? No lo creo."
+	expected = "La frase no es un palíndromo"
+	actual, err = palindrome.IsPalindrome(input)
+	require.NoError(err)
+	require.Equal(expected, actual)
+
+	input = "Hola"
+	expected = "La palabra no es un palíndromo"
+	actual, err = palindrome.IsPalindrome(input)
+	require.NoError(err)
+	require.Equal(expected, actual)
+}
