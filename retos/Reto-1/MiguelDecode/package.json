@@ -1,0 +1,17 @@
+{
+  "name": "challenge-one",
+  "version": "1.0.0",
+  "description": "First challenge of 'Programación en español' community",
+  "main": "src/fibonacci.js",
+  "directories": {
+    "test": "jest"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "Miguel Decode",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
