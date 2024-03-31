@@ -43,6 +43,15 @@ const formatToPascalCase = (string) => {
 };
 
 const caseTransformer = (input, caseFormat) => {
+  let validCaseFormat = ["camel", "pascal", "snake", "kebab"];
+
+  if (!input) throw new Error("You must introduce a word or a sentence");
+
+  if (!caseFormat) throw new Error("You must to introduce a case format value");
+
+  if (!validCaseFormat.includes(caseFormat))
+    throw new Error("You must insert a correct value of caseFormat");
+
   let result = "";
 
   let string = formatInput(input);
@@ -55,7 +64,15 @@ const caseTransformer = (input, caseFormat) => {
         break;
 
       case "pascal":
-        result = string[0].toUpperCase();
+        result = string[0].toUpperCase() + string.slice(1);
+        break;
+
+      case "snake":
+        result = string;
+        break;
+
+      case "kebab":
+        result = string;
         break;
     }
   } else {
@@ -82,9 +99,4 @@ const caseTransformer = (input, caseFormat) => {
   return result;
 };
 
-const caseOne = caseTransformer("hola mundo", "snake");
-const caseTwo = caseTransformer("hola mundo", "kebab");
-const caseThree = caseTransformer("hola mundo", "pascal");
-const caseFour = caseTransformer("hola mundo", "camel");
-
-// console.log(caseOne);
+module.exports = caseTransformer;

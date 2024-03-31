@@ -1,0 +1,15 @@
+{
+  "name": "migueldecode",
+  "version": "1.0.0",
+  "description": "Third challenge of 'Programación en español' community",
+  "main": "src/case_transformer.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "Miguel Decode",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
