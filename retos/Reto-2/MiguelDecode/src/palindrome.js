@@ -1,24 +1,12 @@
-const isWord = (string) => string.split(" ").length == 1;
+const formatInput = require("../src/formatInput");
 
-const formatInput = (string) => {
-  const regexSymbols = /[.!¡?¿''"";:~]/gi;
-
-  const formatInput = string
-    .trim()
-    .toLowerCase()
-    .replaceAll(" ", "")
-    .replaceAll(regexSymbols, "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-
-  return formatInput;
-};
-
-const palindromo = (input) => {
+const palindrome = (input) => {
   if (!input) throw new Error("No has introducido ninguna palabra o frase.");
 
   if (typeof input !== "string")
     throw new Error("El tipo de dato introducido no es un string.");
+
+  const isWord = (string) => string.split(" ").length == 1;
 
   if (isWord(input)) {
     // It's a word
@@ -41,11 +29,4 @@ const palindromo = (input) => {
   }
 };
 
-// console.log(palindromo());
-// console.log(palindromo(33))
-// console.log(palindromo([1, 2, 3]));
-
-// console.log(palindromo("¿Acaso hubo búhos acá?"));
-// console.log(palindromo("Ana"));
-// console.log(palindromo("Frase random"));
-// console.log(palindromo("Hola"));
+module.exports = palindrome;
