@@ -1,11 +1,20 @@
+/**
+ * Formats a sentence by converting it to lowercase and removing non-alphabetic characters.
+ *
+ * @param {string} sentence - The input sentence to be formatted.
+ * @returns {string} The formatted sentence containing only lowercase alphabetic characters.
+ */
 const formatSentence = (sentence) => {
-  sentence = sentence.toLowerCase();
-
-  let specials = /[^a-z]/g;
-
-  return sentence.replaceAll(specials, "");
+  return sentence.toLowerCase().replace(/[^a-z]/g, "");
 };
 
+/**
+ * Calculates the average occurrence of vowels in a given sentence.
+ *
+ * @param {string} sentence - The input sentence to analyze.
+ * @throws {Error} If the input is empty or not a string.
+ * @returns {Object} An object containing the average occurrence of each vowel.
+ */
 const averageVowels = (sentence) => {
   const vowelCount = {
     a: 0,
@@ -31,16 +40,17 @@ const averageVowels = (sentence) => {
     }
   }
 
-  const totalVowels =
-    vowelCount.a + vowelCount.e + vowelCount.i + vowelCount.o + vowelCount.u;
+  const totalVowels = Object.values(vowelCount).reduce(
+    (sum, count) => sum + count,
+    0,
+  );
 
-  const averageVowels = {
-    a: vowelCount.a / totalVowels,
-    e: vowelCount.e / totalVowels,
-    i: vowelCount.i / totalVowels,
-    o: vowelCount.o / totalVowels,
-    u: vowelCount.u / totalVowels,
-  };
+  const averageVowels = Object.fromEntries(
+    Object.entries(vowelCount).map(([vowel, count]) => [
+      vowel,
+      count / totalVowels,
+    ]),
+  );
 
   return averageVowels;
 };
