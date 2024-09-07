@@ -23,14 +23,21 @@ const averageVowels = (sentence) => {
     o: 0,
     u: 0,
   };
+  
+ class ArgumentError extends Error{
+   constructor(message) {
+     super(message)
+     this.name = 'ArgumentError'
+   }
+ } 
 
   if (!sentence)
-    throw new Error(
+    throw new ArgumentError(
       "Debes ingresar una frase o palabra para contar su vocales.",
     );
 
   if (typeof sentence !== "string")
-    throw new Error("Solo se admite un string como tipo de dato válido.");
+    throw new ArgumentError("Solo se admite un string como tipo de dato válido.");
 
   formattedString = formatSentence(sentence);
 
