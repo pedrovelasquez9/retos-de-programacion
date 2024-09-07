@@ -26,11 +26,11 @@ Entrada: **"Esta es una prueba"**
 Salida Esperada:
 
 {
-"a": 0.42857142857142855,
-"e": 0.42857142857142855,
+"a": 0.375,
+"e": 0.375,
 "i": 0,
 "o": 0,
-"u": 0.14285714285714285
+"u": 0.25,
 }
 
 #### Explicación
@@ -39,7 +39,7 @@ En la frase "Esta es una prueba", las vocales aparecen en las siguientes cantida
 
 a aparece 3 veces.
 e aparece 3 veces.
-u aparece 1 vez.
+u aparece 2 vez.
 i y o no aparecen en la frase.
 El total de vocales es 3 (a) + 3 (e) + 2 (u) = 8.
 
