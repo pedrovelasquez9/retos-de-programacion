@@ -17,7 +17,7 @@ const averageVowels = (sentence) => {
 
   if (!sentence)
     throw new Error(
-      "Debes ingresar una frase o palabra para contar su vocales."
+      "Debes ingresar una frase o palabra para contar su vocales.",
     );
 
   if (typeof sentence !== "string")
@@ -26,26 +26,8 @@ const averageVowels = (sentence) => {
   formattedString = formatSentence(sentence);
 
   for (const vowel of formattedString) {
-    switch (vowel) {
-      case "a":
-        vowelCount.a++;
-        break;
-
-      case "e":
-        vowelCount.e++;
-        break;
-
-      case "i":
-        vowelCount.i++;
-        break;
-
-      case "o":
-        vowelCount.o++;
-        break;
-
-      case "u":
-        vowelCount.u++;
-        break;
+    if (vowel in vowelCount) {
+      vowelCount[vowel]++;
     }
   }
 
