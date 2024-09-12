@@ -39,7 +39,7 @@ En la frase "Esta es una prueba", las vocales aparecen en las siguientes cantida
 
 a aparece 3 veces.
 e aparece 3 veces.
-u aparece 2 vez.
+u aparece 2 veces.
 i y o no aparecen en la frase.
 El total de vocales es 3 (a) + 3 (e) + 2 (u) = 8.
 
