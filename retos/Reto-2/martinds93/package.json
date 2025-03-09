@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.18"
+  },
+  "dependencies": {
+    "martinds93": "file:"
   }
 }

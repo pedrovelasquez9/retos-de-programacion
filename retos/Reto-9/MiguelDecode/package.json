@@ -14,5 +14,8 @@
   "description": "Challenge nine of 'Programación en español' community",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "migueldecode": "file:"
   }
 }
